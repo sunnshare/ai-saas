@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  // baseURL: "https://api.ai-yyds.com/",
+  baseURL: process.env.BASEURL,
   apiKey: process.env.OPENAI_API_KEY,
 });
 
