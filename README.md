@@ -2,9 +2,10 @@
 
 [VIDEO TUTORIAL](https://www.youtube.com/watch?v=ffJ38dBzrlY)
 
-[视频源地址](https://github.com/AntonioErdeljac/next13-ai-saas)
+[github 源地址](https://github.com/AntonioErdeljac/next13-ai-saas)
 
 Open AI - 国外访问不了，使用了代理 api - [https://ai-yyds.com](https://ai-yyds.com)
+
 Replicate - 需要绑定银行卡，改用 postgresql - [https://supabase.com/](https://supabase.com/)
 
 Features:
