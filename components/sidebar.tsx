@@ -1,11 +1,13 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
-import { Montserrat } from "next/font/google";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { Montserrat } from "next/font/google";
+
+import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
+
+import { cn } from "@/lib/utils";
 import { FreeCounter } from "@/components/free-counter";
 
 const montserrat = Montserrat({ weight: "600", subsets: ['latin'] })
@@ -59,7 +61,7 @@ interface SideBarProps {
   isPro: boolean
 }
 
-const Sidebar = ({ apiLimitCount = 0, isPro = false }: SideBarProps) => {
+export const Sidebar = ({ apiLimitCount = 0, isPro = false }: SideBarProps) => {
   const pathname = usePathname()
   return (
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
@@ -85,5 +87,3 @@ const Sidebar = ({ apiLimitCount = 0, isPro = false }: SideBarProps) => {
     </div>
   )
 }
-
-export default Sidebar

@@ -9,7 +9,7 @@ interface HeadingProps {
   bgColor?: string;
 }
 
-const Heading = ({ title, description, icon: Icon, iconColor, bgColor }: HeadingProps) => {
+export const Heading = ({ title, description, icon: Icon, iconColor, bgColor }: HeadingProps) => {
   return (
     <>
       <div className="px-4 lg:px-8 flex item-center gap-x-3 mb-8">
@@ -28,5 +28,3 @@ const Heading = ({ title, description, icon: Icon, iconColor, bgColor }: Heading
     </>
   );
 }
-
-export default Heading;

@@ -1,6 +1,6 @@
+import Replicate from "replicate";
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
-import Replicate from "replicate";
 
 import { checkApiLimit, increaseApiLimit } from "@/lib/api-limit";
 import { checkSubscription } from "@/lib/subscription";
@@ -26,14 +26,14 @@ export async function POST(req: Request) {
     const isPro = await checkSubscription();
 
     if (!freeTrial && !isPro) {
-      return new NextResponse("Free trial has expired.", { status: 403 });
+      return new NextResponse("Free trial has expired. Please upgrade to pro.", { status: 403 });
     }
 
     const response = await replicate.run(
       "riffusion/riffusion:8cf61ea6c56afd61d8f5b9ffd14d7c216c0a93844ce2d82ac1c9ecc9c7f24e05",
       {
         input: {
-          prompt_a: "funky synth solo",
+          prompt_a: prompt,
         },
       }
     );
